@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react'
+import LandingPage from './components/landingpage/LandingPage'
+import About from './components/about/About'
 
-function App() {
+import { createGlobalStyle } from 'styled-components'
+
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+  }
+`
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Fragment>
+        <GlobalStyle />
+
+        <LandingPage />
+
+      </Fragment>
+    </>
+  )
 }
 
-export default App;
+export default App
