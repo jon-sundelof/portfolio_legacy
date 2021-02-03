@@ -18,7 +18,7 @@ const grain = keyframes`
 
 export const PageWrapper = styled.div`
     z-index: -99;
-    height: 250vh;
+    height: 420vh;
     /* background: #1A1A1D; */
     background: #000;
     

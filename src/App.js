@@ -12,6 +12,17 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Chakra Petch', sans-serif;
   }
+
+&::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: #353535;
+  border-radius: 5px;
+}
+
+&::-webkit-scrollbar {
+  width: 10px;
+  background-color: #0f0f0f;
+}
 `
 
 
@@ -22,6 +33,7 @@ const App = () => {
         <GlobalStyle />
 
         <LandingPage />
+
 
       </Fragment>
     </>
