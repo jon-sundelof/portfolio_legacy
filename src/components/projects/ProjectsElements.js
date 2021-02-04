@@ -11,7 +11,9 @@ export const ContentConatiner = styled.div.attrs(props => ({
 `
 export const CardContainer = styled.div`
     height: 100%;
+    z-index: 999;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -22,13 +24,14 @@ export const Card = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    height: 450px;
-    width: 260px;
-    z-index: 999;
+    height: 420px;
+    width: 220px;
+    z-index: 99;
     background: #ffffff;
 
+    margin-bottom: 15px;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 15px;
 `
 export const Circle = styled.div`
     display: flex;
@@ -41,8 +44,8 @@ export const Circle = styled.div`
     border-radius: 50%;
 `
 export const CardImg = styled.img`
-    width: 220px;
-    height: 120px;
+    width: 200px;
+    height: 100px;
     border-radius: 5px;
     box-shadow: 5px 5px 15px #000;
 `

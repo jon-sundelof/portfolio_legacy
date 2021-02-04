@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import RepositoryBlueprint from './RepositoryBlueprint'
 import { SectionWrapper } from '../ReusableElements'
+import { RepoCardsContainer } from './RepositoryElements'
 
 
 const Repository = () => {
@@ -23,15 +24,18 @@ const Repository = () => {
             .then(res => res.json())
             .then(data => {
                 setRepo(data)
+                console.log(data)
             })
     }, [])
 
     return (
         <>
             <SectionWrapper>
-                {repo.map(function (item, i) {
-                    return <RepositoryBlueprint key={i} id={item.id} name={item.name} language={item.language} url={item.url} />
-                })}
+                <RepoCardsContainer>
+                    {repo.map(function (item, i) {
+                        return <RepositoryBlueprint key={i} id={item.id} name={item.name} language={item.language} url={item.html_url} />
+                    })}
+                </RepoCardsContainer>
             </SectionWrapper>
         </>
     )

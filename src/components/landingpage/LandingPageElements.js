@@ -35,7 +35,7 @@ export const PageWrapper = styled.div`
   height: 300%;
   width: 300%;
   /* We're using opacity in place of a transparent image */
-  opacity: 0.035;
+  opacity: 0.05;
   /* We'll need this when the animation kicks in to hold the position of the texture */
   position: fixed;
 }` 

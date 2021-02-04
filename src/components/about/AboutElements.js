@@ -12,39 +12,43 @@ export const ContentConatiner = styled.div`
 `
 export const FlexRow = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
- /*    height: 100%; */
 `
 
 export const TextContent = styled.p`
+    z-index: 99;
     font-family: 'Roboto', sans-serif;
-    max-width: 740px;
-    font-size: 29px;
-    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    max-width: 640px;
+    font-size: 18px;
+    color: #636363;
     `
+export const BoldSpan = styled.span`
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+`
 
 export const AboutImg = styled.img`
-    z-index: 999;
-    width: 35%;
+    z-index: 0;
+/*     position: absolute; */
+    width: 20%;
+    border-radius: 3px;
 `
 
 export const TextSpan = styled.span`
     position: absolute;
-    z-index: 999;
-    top: 109%;
-    left: 10%;
+    top: 138%;
+    right: -20%;
+    font-size: 30px;
     -webkit-transform: rotate(90deg);
     -webkit-transform-origin: left top;
-    
-    padding: 10px;
     font-weight: 700;
     color: #C3073F;
-    font-size: 34px;
-         &:hover ${AboutImg} {
-        color: black;
-  }
 
 `
 
@@ -79,7 +83,7 @@ const sdb06 = keyframes`
   }
   `
 
-export const AnimatedScroll = styled(Link)`
+export const AnimatedScroll = styled.span`
 /*     position: absolute; */
 /*     top: 150%;
     left: 50%; */
@@ -104,7 +108,7 @@ export const ScrollText = styled.span`
     font-size: 2rem;
     color: #C3073F;
    `
-export const ScrollBtnCon = styled.div`
+export const ScrollBtnCon = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,5 +117,6 @@ export const ScrollBtnCon = styled.div`
     margin-top: 0;
    /*  width: 450px; */
     height: 100px;
+    cursor: pointer;
    `
 
