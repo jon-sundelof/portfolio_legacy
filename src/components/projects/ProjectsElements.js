@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 
 export const ContentConatiner = styled.div`
@@ -6,11 +6,12 @@ export const ContentConatiner = styled.div`
 `
 export const SlideContainer = styled.div`
     display: flex;
-/*     justify-content: center; */
-    position: absolute;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    width: 100%;
-    overflow: hidden;
+    width: 60%;
+    height: 100%;
+
 
 `
 
@@ -50,7 +51,6 @@ export const Card = styled.div`
     transform: translateX(${props => props.translate}px);
     transition: 500ms ease-in-out;
     ${({ active }) => active && `
-    
     opacity: 1;
   `}
   
@@ -63,14 +63,15 @@ justify-content: center;
 align-items: center;
 width: 250px;
 max-height: 200px;
-/* background: linear-gradient(to left top, var(--primary-color) 0%, var(--secondary-color) 100%); */
+background: linear-gradient(to left top, var(--primary-color) 0%, var(--secondary-color) 100%);
 border-radius: 5px;
 `
 export const CardImg = styled.img`
-width: 220px;
-height: 120px;
+margin-top: 0;
+width: 255px;
+height: 135px;
 border-radius: 5px;
-box-shadow: 5px 5px 15px var(--grey);
+box-shadow: 0px 5px 5px rgba(0,0,0, 0.4);
 `
 
 export const CardHeader = styled.h2`
@@ -84,7 +85,8 @@ export const CardText = styled.p`
 font-family: 'Roboto', sans-serif;
 z-index: 999;
 max-width: 240px;
-height: 155px;
+max-height: 143px;
+min-height: 143px;
 font-size: 14px;
 font-weight: 300;
 `
@@ -110,3 +112,68 @@ width: 150px;
 height: 150px;
 background-color: red;
 `
+
+
+const right = keyframes`
+   0% {
+    -webkit-transform:  rotateZ(225deg) translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: rotateZ(225deg) translate(-15px, 15px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform:  rotateZ(225deg) translate(0, 0);
+    opacity: 0.8;
+  }
+  `
+
+export const AnimatedScrollRight = styled.span`
+ /*    position: absolute; */
+    left: ${props => props.left};
+    width: 55px;
+    height: 55px;
+    margin-left: -12px;
+    border-left: 12px solid var(--white);
+    border-bottom: 12px solid var(--white);
+    border-radius: 10%;
+    animation: ${right} 3s infinite ease-in-out;
+    -webkit-animation: ${right} 3s infinite ease-in-out;
+
+    :hover {
+    cursor: pointer;
+}
+`
+const left = keyframes`
+   0% {
+    -webkit-transform:  rotateZ(45deg) translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: rotateZ(45deg) translate(-15px, 15px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform:  rotateZ(45deg) translate(0, 0);
+    opacity: 0.8;
+  }
+  `
+
+export const AnimatedScrollLeft = styled.span`
+ /*    position: absolute; */
+    left: ${props => props.left};
+    width: 55px;
+    height: 55px;
+    margin-left: -12px;
+    border-left: 12px solid var(--white);
+    border-bottom: 12px solid var(--white);
+    border-radius: 10%;
+    animation: ${left} 3s infinite ease-in-out;
+    -webkit-animation: ${left} 3s infinite ease-in-out;
+
+    :hover {
+    cursor: pointer;
+}
+`
+

@@ -1,39 +1,41 @@
 import React, { useState } from 'react'
 import { ProjectCardData } from './ProjectsCardData'
-import { CardContainer, SlideContainer, SlideBtn } from './ProjectsElements'
+import { CardContainer, SlideContainer, AnimatedScrollLeft, AnimatedScrollRight } from './ProjectsElements'
 import Projects from './Projects'
 import { SectionWrapper } from '../ReusableElements'
 
 const ProjectsRender = () => {
 
-    const [activeId, setActiveId] = useState(1)
-    const [slideVal, setSlidevalue] = useState(0)
+    const [activeId, setActiveId] = useState(4)
+    const [slideVal, setSlidevalue] = useState(-900)
 
 
     const PreviousSlide = () => {
-        if (activeId < 1) {
-            return;
+        if (activeId == 0) {
+            setSlidevalue(-1500)
+            setActiveId(6)
+            return
         }
 
         setSlidevalue(slideVal + 300)
         setActiveId(activeId - 1)
-        console.log(SlideBtn.length)
+
     }
     const NextSlide = () => {
-        if (activeId > 5) {
-            return;
+        if (activeId > 6) {
+            setSlidevalue(0)
+            setActiveId(1)
+            return
         }
         setSlidevalue(slideVal - 300)
         setActiveId(activeId + 1)
-        console.log(slideVal)
     }
 
     return (
         <>
             <SectionWrapper id="projects-wrapper">
-                <SlideBtn onClick={NextSlide}>INCREASE VALUE</SlideBtn>
-                <SlideBtn onClick={PreviousSlide}>DECREASE VALUE</SlideBtn>
                 <SlideContainer>
+                    <AnimatedScrollLeft left="10%" onClick={PreviousSlide}></AnimatedScrollLeft>
                     <CardContainer>
                         {ProjectCardData.map(function (item, i) {
                             return (
@@ -42,6 +44,7 @@ const ProjectsRender = () => {
                         })
                         }
                     </CardContainer>
+                    <AnimatedScrollRight left="85%" onClick={NextSlide}></AnimatedScrollRight>
                 </SlideContainer>
             </SectionWrapper>
         </>

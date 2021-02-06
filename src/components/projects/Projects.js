@@ -7,7 +7,7 @@ const Projects = ({ header, text, img, GitSvg, SurgeSvg, slideVal, id, active })
         <>
             <ContentConatiner id={id}>
                 <Card active={active} translate={slideVal}>
-                    <Circle><CardImg src={img} /></Circle>
+                    <CardImg src={img} />
                     <CardHeader>{header}</CardHeader>
                     <CardText>{text}</CardText>
                     <SvgsContainer>
