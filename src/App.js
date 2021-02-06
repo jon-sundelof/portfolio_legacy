@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import LandingPage from './components/landingpage/LandingPage'
-import About from './components/about/About'
 
 import { createGlobalStyle } from 'styled-components'
 
@@ -11,6 +10,17 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Chakra Petch', sans-serif;
+  }
+
+  :root {
+/*     --primary-color: #C3073F;
+    --secondary-color: #950740; */
+    --primary-color: #ff847c;
+    --secondary-color: #feceab;
+   /*  --primary-color: #efbbcf;
+    --secondary-color: #ffd5cd; */
+    --white: #fff;
+    --grey: #636363;
   }
 
 &::-webkit-scrollbar-thumb {
@@ -31,10 +41,7 @@ const App = () => {
     <>
       <Fragment>
         <GlobalStyle />
-
         <LandingPage />
-
-
       </Fragment>
     </>
   )

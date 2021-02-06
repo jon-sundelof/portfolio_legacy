@@ -14,10 +14,10 @@ export const AnimatedButton = styled(Link)`
   width: 170px;
 
   font-family: 'Roboto', sans-serif;
-  color: #fff;
+  color: var(--white);
   font-size: 30px;
-  border: 2px solid #fff;
-  background: #C3073F;
+  border: 2px solid var(--white);
+  background: var(--primary-color);
   cursor: pointer;
   outline-style: none;
 
@@ -31,7 +31,7 @@ export const AnimatedButton = styled(Link)`
     bottom: 0;
     right: 0;
     z-index: -1;
-    background-color: #fff;
+    background-color: var(--white);
     /* background-color: #950740; */
 
     transition: transform 300ms ease-in-out;
@@ -40,7 +40,7 @@ export const AnimatedButton = styled(Link)`
   }
 
   &:hover{
-    color: #C3073F;
+    color: var(--primary-color);
   }
   &:hover::before{
     transform: scaleX(1);
@@ -65,6 +65,9 @@ font-family: ${props => props.font};
 font-style: normal;
 font-weight: 600;
 line-height: 117px;
+color: var(--white);
 
-color: #FFFFFF;
+  @media screen and (max-width: 1600px) {
+    font-size: 55px;
+  }
 `

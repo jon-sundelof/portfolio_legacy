@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Text = styled.h1`
-    color: #fff;
+    color: var(--white);
     font-size: 3rem;
     z-index: 9999;
 `
@@ -52,17 +52,17 @@ export const CardFaceFront = styled.div`
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 16px;
-    background-image: linear-gradient(to bottom right, rgba(149, 7, 64, 1) 15%, rgba(193, 7, 64, 1) 115%);
+    background-image: linear-gradient(to left top, var(--primary-color) 0%, var(--secondary-color) 220%);
     display: flex;
       align-items: center;
       justify-content: center;
       transition: 500ms ease-in-out;
-    :hover {
+ /*    :hover {
         transition: 500ms ease-in-out;
         margin: -15px -15px -15px -15px;
         width: 210px;
         height: 360px;
-    }
+    } */
 `
 export const CardFaceBack = styled.div`
     z-index: 9999;
@@ -73,7 +73,7 @@ export const CardFaceBack = styled.div`
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 16px;
-    background-color: #fff;
+    background-color: var(--white);
     transform: rotateY(180deg);
 `
 export const CardContent = styled.div`
@@ -94,7 +94,7 @@ export const CardHeader = styled.div`
         bottom: 0;
         z-index: -1;
         border-radius: 0 0 50% 0;
-        background-image: linear-gradient(to bottom left, rgba(149, 7, 64, 1) 10%, rgba(193, 7, 64, 1) 115%);
+        background-image: linear-gradient(to left top, var(--primary-color) 0%, var(--secondary-color) 130%);
     }
 `
 export const CardBody = styled.div`
@@ -109,14 +109,17 @@ export const CardImg = styled.img`
     height: 60px;
     margin: 0 auto 10px;
     border-radius: 50%;
-    background-color: #fff;
-    border: 5px solid #fff;
+    background-color: var(--white);
+    border: 5px solid var(--white);
 `
 export const CardName = styled.h2.attrs(props => ({
     font: props.font,
 }))`
+/*  -webkit-transform: rotate(90deg); */
+  /*   -webkit-transform-origin: left top; */
     text-align: center;
     font-size: ${props => props.font};
-    color: #fff;
-    width: 80%;
+    color: var(--white);
+    margin: 0 auto;
+    width: 100%;
 `

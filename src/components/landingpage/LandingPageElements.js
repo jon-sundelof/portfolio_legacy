@@ -21,13 +21,15 @@ export const PageWrapper = styled.div`
     height: 420vh;
     /* background: #1A1A1D; */
     background: #000;
+
     
     :after {
   /* content is required when using :after */
+/*   z-index: -99999; */
   content: "";
   top: -110%;
   left: -50%;
-
+  pointer-events: none;
   animation: ${grain} 8s steps(10) infinite;
   /* The grainy image */
   background-image: url(${Grainy});

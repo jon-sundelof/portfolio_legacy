@@ -24,13 +24,13 @@ export const TextContent = styled.p`
     text-align: center;
     max-width: 640px;
     font-size: 18px;
-    color: #636363;
+    color: var(--grey);
     `
 export const BoldSpan = styled.span`
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
     font-size: 22px;
-    color: #fff;
+    color: var(--white);
 `
 
 export const AboutImg = styled.img`
@@ -48,7 +48,7 @@ export const TextSpan = styled.span`
     -webkit-transform: rotate(90deg);
     -webkit-transform-origin: left top;
     font-weight: 700;
-    color: #C3073F;
+    color: var(--primary-color);
 
 `
 
@@ -91,8 +91,8 @@ export const AnimatedScroll = styled.span`
     width: 35px;
     height: 35px;
     margin-left: -12px;
-    border-left: 4px solid #fff;
-    border-bottom: 4px solid #fff;
+    border-left: 4px solid var(--white);
+    border-bottom: 4px solid var(--white);
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
     animation: ${animaterot} 2s infinite, ${rotate} 2s infinite;
@@ -106,7 +106,7 @@ export const AnimatedScroll = styled.span`
 
 export const ScrollText = styled.span`
     font-size: 2rem;
-    color: #C3073F;
+    color: var(--primary-color);
    `
 export const ScrollBtnCon = styled(Link)`
     display: flex;
