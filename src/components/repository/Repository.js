@@ -30,10 +30,10 @@ const Repository = () => {
 
     return (
         <>
-            <SectionWrapper>
+            <SectionWrapper id="repository-wrapper">
                 <RepoCardsContainer>
                     {repo.map(function (item, i) {
-                        return <RepositoryBlueprint key={i} id={item.id} name={item.name} language={item.language} url={item.html_url} />
+                        return <RepositoryBlueprint key={i} id={item.id} name={item.name} language={item.language} url={item.html_url} description={item.description} />
                     })}
                 </RepoCardsContainer>
             </SectionWrapper>

@@ -3,7 +3,7 @@ import { act } from 'react-dom/test-utils'
 import { Text, Card, CardInner, CardFaceFront, CardFaceBack, CardBody, CardContent, CardHeader, CardImg, CardName, CardText } from './RepositoryElements'
 import GitSvg from '../../img/github-icon.svg'
 
-const RepositoryBlueprint = ({ id, url, language, name }) => {
+const RepositoryBlueprint = ({ id, url, language, name, description }) => {
     const [active, setActive] = useState(false)
     const [front, setFront] = useState(true)
 
@@ -19,17 +19,17 @@ const RepositoryBlueprint = ({ id, url, language, name }) => {
             <Card>
                 <CardInner onClick={FlipCard} active={active}>
                     <CardFaceFront front={front}>
-                        <CardName font="18px">{name}</CardName>
+                        <CardName color="var(--white)" font="18px">{name}</CardName>
                     </CardFaceFront>
                     <CardFaceBack>
                         <CardContent>
                             <CardHeader>
-                                <a href={url}><CardImg src={GitSvg} /></a>
-                                <CardName font="16px">{name}</CardName>
+                                <a href={url} target="_blank"><CardImg src={GitSvg} /></a>
                             </CardHeader>
                             <CardBody>
-                                <CardText>{url}</CardText>
-                                <CardText>{language}</CardText>
+                                <CardText font="20px">{language}</CardText>
+                                <CardName color="var(--primary-color)" font="16px">{name}</CardName>
+                                <CardText font="13px">{description}</CardText>
                             </CardBody>
                         </CardContent>
                     </CardFaceBack>

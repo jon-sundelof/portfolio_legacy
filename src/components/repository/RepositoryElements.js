@@ -13,12 +13,14 @@ export const RepoCardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 `
 
 export const Card = styled.div`
     z-index: 999;
     width: 180px;
     height: 330px;
+    /* padding: 5px; */
     /* width: 265px;
     height: 450px; */
     perspective: 450px;
@@ -98,9 +100,17 @@ export const CardHeader = styled.div`
     }
 `
 export const CardBody = styled.div`
-
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 export const CardText = styled.p`
+ text-align: center;
+ font-size: ${props => props.font};
+ margin-bottom: 5px;
+ margin-top: 5px;
+/*  width: 160px; */
 `
 
 export const CardImg = styled.img`
@@ -114,12 +124,13 @@ export const CardImg = styled.img`
 `
 export const CardName = styled.h2.attrs(props => ({
     font: props.font,
+    color: props.color,
 }))`
 /*  -webkit-transform: rotate(90deg); */
   /*   -webkit-transform-origin: left top; */
     text-align: center;
     font-size: ${props => props.font};
-    color: var(--white);
+    color: ${props => props.color};
     margin: 0 auto;
     width: 100%;
 `

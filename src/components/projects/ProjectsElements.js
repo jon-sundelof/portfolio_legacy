@@ -17,18 +17,13 @@ export const SlideContainer = styled.div`
 
 export const CardContainer = styled.div`
     position: relative;
-    height: 50%;
-    max-width: 900px;
+    height: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    transition: transform 800ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-/*     transition: 1s ease-in-out; */
-
-    /* border: 5px solid var(--white); */
 `
 
 export const Card = styled.div`
@@ -36,61 +31,81 @@ export const Card = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    
+    filter: blur(3px);
     opacity: 0.3;
     height: 420px;
     width: 220px;
     z-index: 9999;
- /*    margin-bottom: 15px; */
     margin-left: 20px;
     margin-right: 20px;
     padding: 20px;
     border-radius: 15px;
     background: var(--white);
-/*     transition: transform 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955); */
+
+
     transform: translateX(${props => props.translate}px);
-    transition: 500ms ease-in-out;
+    transition: ${props => props.slideTransition} ease-in-out;
     ${({ active }) => active && `
+    transition: ${props => props.slideTransition} ease-in-out;
+    filter: blur(0);
     opacity: 1;
+    height: 500px;
+    width: 300px;
   `}
   
 
 `
-export const Circle = styled.div`
-display: flex;
-z-index: 999;
-justify-content: center;
-align-items: center;
-width: 250px;
-max-height: 200px;
-background: linear-gradient(to left top, var(--primary-color) 0%, var(--secondary-color) 100%);
-border-radius: 5px;
-`
+
 export const CardImg = styled.img`
-margin-top: 0;
-width: 255px;
+position: absolute;
+top: 0;
+/* width: 260px; */
+width: 100%;
 height: 135px;
-border-radius: 5px;
+border-radius: 15px 15px 0 0;
+/* border-radius: 5px; */
+/* border-bottom: 5px solid var(--primary-color); */
 box-shadow: 0px 5px 5px rgba(0,0,0, 0.4);
+transition: ${props => props.slideTransition} ease-in-out;
+${({ active }) => active && `
+    height: 185px;
+  `}
 `
 
 export const CardHeader = styled.h2`
 /*   font-family: 'Roboto', sans-serif; */
+position: relative;
+top: 22%;
 color: var(--primary-color);
 font-size: 24px;
 font-weight: 700;
+transition: ${props => props.slideTransition} ease-in-out;
+${({ active }) => active && `
+    font-size: 32px;
+  `}
 `
 
 export const CardText = styled.p`
+text-align: center;
+position: relative;
+top: 8%;
 font-family: 'Roboto', sans-serif;
 z-index: 999;
-max-width: 240px;
-max-height: 143px;
+max-width: 275px;
+max-height: 23px;
 min-height: 143px;
 font-size: 14px;
 font-weight: 300;
+transition: ${props => props.slideTransition} ease-in-out;
+${({ active }) => active && `
+    height: 185px;
+    max-width: 290px;
+    font-size: 18px;
+  `}
 `
 export const SvgsContainer = styled.div`
+position: relative;
+top: 8%;
 width: 100%;
 display: flex;
 justify-content: space-evenly;

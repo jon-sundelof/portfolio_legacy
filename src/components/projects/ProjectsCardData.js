@@ -19,7 +19,7 @@ export const ProjectCardData = [
     {
         id: 1,
         header: 'E-Shirts / E-store',
-        text: 'This is a projects that me and my classmate Jesper built together as a spinoff to the Qurire note-app. For this website we have implemented firebase to store userdata. With help of firebase we also implemented user authentication with email, but also Google authantication.',
+        text: 'This is a projects that me and my friend Jesper built together as a spinoff to the Qurire note-app. For this website we have implemented firebase to store userdata. With help of firebase we also implemented user authentication with email, but also Google authantication.',
         img: Estore,
         GitSvg: GitIcon,
         SurgeSvg: Surge
@@ -50,7 +50,7 @@ export const ProjectCardData = [
     }, {
         id: 5,
         header: 'E-Shirts / E-store',
-        text: 'This is a projects that me and my classmate Jesper built together as a spinoff to the Qurire note-app. For this website we have implemented firebase to store userdata. With help of firebase we also implemented user authentication with email, but also Google authantication.',
+        text: 'This is a projects that me and my friend Jesper built together as a spinoff to the Qurire note-app. For this website we have implemented firebase to store userdata. With help of firebase we also implemented user authentication with email, but also Google authantication.',
         img: Estore,
         GitSvg: GitIcon,
         SurgeSvg: Surge
