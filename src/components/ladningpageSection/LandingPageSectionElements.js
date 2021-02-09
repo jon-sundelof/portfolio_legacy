@@ -14,10 +14,11 @@ export const AnimatedButton = styled(Link)`
   width: 170px;
 
   font-family: 'Roboto', sans-serif;
-  color: var(--white);
+  color: var(--primary-color);
   font-size: 30px;
-  border: 2px solid var(--white);
-  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+  background: transparent;
   cursor: pointer;
   outline-style: none;
 
@@ -31,7 +32,8 @@ export const AnimatedButton = styled(Link)`
     bottom: 0;
     right: 0;
     z-index: -1;
-    background-color: var(--white);
+/*     color: var(--white); */
+    background-color: var(--primary-color);
     /* background-color: #950740; */
 
     transition: transform 300ms ease-in-out;
@@ -40,13 +42,18 @@ export const AnimatedButton = styled(Link)`
   }
 
   &:hover{
-    color: var(--primary-color);
+    color: #000;
   }
   &:hover::before{
     transform: scaleX(1);
   }
   &:focus::before{
     transform: scaleX(1);
+  }
+  @media screen and (max-width: 1030px) {
+    font-size: 20px;
+    height: 35px;
+    width: 110px;
   }
   
 `
@@ -70,4 +77,29 @@ color: var(--white);
   @media screen and (max-width: 1600px) {
     font-size: 55px;
   }
+  @media screen and (max-width: 1030px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 765px) {
+    display: none;
+  }
+`
+
+export const SmallScreenWrapper = styled.div`
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 765px) {
+    display: flex;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 0.8rem;
+  }
+`
+
+export const SmallScreenHeader = styled.h1`
+    color: var(--white);
+
 `

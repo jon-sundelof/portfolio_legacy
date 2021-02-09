@@ -19,7 +19,7 @@ const RepositoryBlueprint = ({ id, url, language, name, description }) => {
             <Card>
                 <CardInner onClick={FlipCard} active={active}>
                     <CardFaceFront front={front}>
-                        <CardName color="var(--white)" font="18px">{name}</CardName>
+                        <CardName color="#000" font="18px">{name}</CardName>
                     </CardFaceFront>
                     <CardFaceBack>
                         <CardContent>

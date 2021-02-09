@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../navbar/Navbar'
+import NavComponent from '../navbar/NavComponent'
 import LandingPageSection from '../ladningpageSection/LandingPageSection'
 import About from '../about/About'
 import ProjectsRender from '../projects/ProjectsRender'
@@ -12,7 +12,7 @@ const LandingPage = () => {
     return (
         <>
             <PageWrapper>
-                <Navbar />
+                <NavComponent />
                 <LandingPageSection />
                 <About />
                 <ProjectsRender />

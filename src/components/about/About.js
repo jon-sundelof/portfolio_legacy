@@ -9,7 +9,7 @@ import Jon from '../../img/nob-bw.png'
 const About = () => {
     return (
         <>
-            <SectionWrapper id="about-wrapper" >
+            <SectionWrapper height="100vh" id="about-wrapper" >
                 <ContentConatiner>
                     <FlexRow>
                         {/*    <TextSpan>React | JavaScript | Front-End</TextSpan> */}

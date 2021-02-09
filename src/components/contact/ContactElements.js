@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const ContactContainer = styled.div`
+    display: flex;
     width: 100%;
     height: 100%;
 `
@@ -16,8 +17,11 @@ export const ContactFormCon = styled.div`
 `
 
 export const ContactHeader = styled.h2`
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 4rem;
+    @media screen and (max-width: 1000px) {
+        font-size: 2.8rem;
+  }
 `
 
 export const Form = styled.form`
@@ -25,8 +29,12 @@ export const Form = styled.form`
  flex-direction: column;
  justify-content: space-around;
  align-content: space-around;
- width: 25%;
+ width: 30%;
  height: 40%;
+ 
+ @media screen and (max-width: 1000px) {
+        width: 55%;
+  }
 
 `
 export const Input = styled.input`

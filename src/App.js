@@ -11,13 +11,23 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Chakra Petch', sans-serif;
   }
+  a, a:visited{
+  color: inherit;
+  text-decoration: none;
+}
 
   :root {
 /*     --primary-color: #C3073F;
     --secondary-color: #950740; */
+
+/*     --primary-color: #FDC4F9;
+--secondary-color: #AAA1E6;
+    --third-color: #CAEFFC; */
+
     --primary-color: #EDC7B7;
     --secondary-color: #EEE2DC;
     --third-color: #AC3B61;
+
  /*    --primary-color: #ff847c;
     --secondary-color: #feceab; */
    /*  --primary-color: #efbbcf;

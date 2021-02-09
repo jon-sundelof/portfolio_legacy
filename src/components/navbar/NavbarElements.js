@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll';
 
+
 export const Nav = styled.nav`
     height: 80px;
     width: 100%;
@@ -28,6 +29,9 @@ export const List = styled.ul`
     @media screen and (max-width: 800px){
         width: 95vw;
     }
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 
 export const NavItems = styled(Link)`
@@ -35,20 +39,37 @@ export const NavItems = styled(Link)`
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     z-index: 99;
-    width: 90px;
+    width: 110px;
     height: 32px;
     font-size: 22px;
     color: var(--white);
     text-shadow: 5px 5px 5px #000;
   /*   border-bottom: 4px solid rgba(195, 7, 63, 0); */
+   /*  transition: 1s ease-in; */
+
     @media screen and (max-width: 1300px){
         font-size: 16px;   
     }
- 
+    
     cursor: pointer;
     
     &.active {
-
         border-bottom: 4px solid var(--primary-color);
     }
 `
+
+
+export const MobileIcon = styled.div`
+    /* display: none; */
+    display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
+    @media screen and (max-width: 768px) {
+        display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #fff;
+    }
+`;

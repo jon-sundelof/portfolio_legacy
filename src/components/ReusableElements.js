@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 
 export const SectionWrapper = styled.div`
-  height: 100vh;
+  height: ${props => props.height};
+`
+
+export const SectionHeader = styled.h1`
+  color: ${props => props.color};
+  font-size: 4rem;
+  text-align: center;
 `
 
 export const ColorSpan = styled.span.attrs(props => ({

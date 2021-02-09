@@ -1,5 +1,14 @@
 import styled, { css } from 'styled-components'
 
+export const RepositoryWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
 export const Text = styled.h1`
     color: var(--white);
     font-size: 3rem;
@@ -9,21 +18,29 @@ export const Text = styled.h1`
 export const RepoCardsContainer = styled.div`
     margin: 0 auto;
     width: 70%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 1000px) {
+        width: 95%;
+  }
 `
 
 export const Card = styled.div`
     z-index: 999;
     width: 180px;
     height: 330px;
+    margin-bottom: 15px;
     /* padding: 5px; */
     /* width: 265px;
     height: 450px; */
     perspective: 450px;
+    @media screen and (max-width: 1000px) {
+        width: 130px;
+        height: 240px;
+  }
     
 `
 export const CardInner = styled.div`
@@ -111,6 +128,11 @@ export const CardText = styled.p`
  margin-bottom: 5px;
  margin-top: 5px;
 /*  width: 160px; */
+@media screen and (max-width: 1000px) {
+    font-size: 10px;
+    max-width: 125px;
+  }
+
 `
 
 export const CardImg = styled.img`
@@ -121,6 +143,10 @@ export const CardImg = styled.img`
     border-radius: 50%;
     background-color: var(--white);
     border: 5px solid var(--white);
+    @media screen and (max-width: 1000px) {
+    width: 40px;
+    height: 40px;
+  }
 `
 export const CardName = styled.h2.attrs(props => ({
     font: props.font,

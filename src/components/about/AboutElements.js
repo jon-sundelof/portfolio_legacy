@@ -23,14 +23,30 @@ export const TextContent = styled.p`
     font-weight: 700;
     text-align: center;
     max-width: 640px;
+    margin-right: 8px;
+    margin-left: 8px;
     font-size: 18px;
     color: var(--grey);
+    @media screen and (max-width: 765px) {
+        font-size: 14px;
+        max-width: 550px;
+  }
+    @media screen and (max-width: 400px) {
+        font-size: 11px;
+        max-width: 250px;
+  }
     `
 export const BoldSpan = styled.span`
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
     font-size: 22px;
     color: var(--white);
+    @media screen and (max-width: 765px) {
+        font-size: 18px;
+  }
+  @media screen and (max-width: 400px) {
+        font-size: 13px;
+  }
 `
 
 export const AboutImg = styled.img`

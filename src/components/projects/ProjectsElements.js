@@ -1,5 +1,16 @@
 import styled, { keyframes } from 'styled-components'
 
+export const SectionHeader = styled.h1`
+  position: absolute;
+  left: 50%;
+  top: 225%;
+  transform: translate(-50%,-50%);
+  color: var(--secondary-color);
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+`
 
 export const ContentConatiner = styled.div`
   
@@ -9,8 +20,7 @@ export const SlideContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 60%;
-    height: 100%;
+    /* height: 50%; */
 
 
 `
@@ -18,12 +28,15 @@ export const SlideContainer = styled.div`
 export const CardContainer = styled.div`
     position: relative;
     height: 100%;
-    max-width: 1000px;
+    width: 800px;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
+    @media screen and (max-width: 1000px) {
+        max-width: 280px;
+  }
 `
 
 export const Card = styled.div`
@@ -33,8 +46,8 @@ export const Card = styled.div`
     flex-direction: column;
     filter: blur(3px);
     opacity: 0.3;
-    height: 420px;
-    width: 220px;
+    height: 320px;
+    width: 170px;
     z-index: 9999;
     margin-left: 20px;
     margin-right: 20px;
@@ -49,8 +62,8 @@ export const Card = styled.div`
     transition: ${props => props.slideTransition} ease-in-out;
     filter: blur(0);
     opacity: 1;
-    height: 500px;
-    width: 300px;
+    height: 400px;
+    width: 220px;
   `}
   
 
@@ -61,46 +74,46 @@ position: absolute;
 top: 0;
 /* width: 260px; */
 width: 100%;
-height: 135px;
+height: 115px;
 border-radius: 15px 15px 0 0;
 /* border-radius: 5px; */
 /* border-bottom: 5px solid var(--primary-color); */
 box-shadow: 0px 5px 5px rgba(0,0,0, 0.4);
 transition: ${props => props.slideTransition} ease-in-out;
 ${({ active }) => active && `
-    height: 185px;
+    height: 155px;
   `}
 `
 
 export const CardHeader = styled.h2`
 /*   font-family: 'Roboto', sans-serif; */
 position: relative;
-top: 22%;
-color: var(--primary-color);
-font-size: 24px;
+top: 25%;
+color: var(--third-color);
+font-size: 18px;
 font-weight: 700;
 transition: ${props => props.slideTransition} ease-in-out;
 ${({ active }) => active && `
-    font-size: 32px;
+    font-size: 24px;
   `}
 `
 
 export const CardText = styled.p`
 text-align: center;
 position: relative;
-top: 8%;
+top: 12%;
 font-family: 'Roboto', sans-serif;
 z-index: 999;
 max-width: 275px;
 max-height: 23px;
 min-height: 143px;
-font-size: 14px;
+font-size: 12px;
 font-weight: 300;
 transition: ${props => props.slideTransition} ease-in-out;
 ${({ active }) => active && `
     height: 185px;
     max-width: 290px;
-    font-size: 18px;
+    font-size: 15px;
   `}
 `
 export const SvgsContainer = styled.div`
@@ -115,8 +128,8 @@ z-index: 999;
 
 export const SvgIcon = styled.img`
 z-index: 999;
-width: 50px;
-height: 50px;
+width: 40px;
+height: 40px;
 cursor: pointer;
 `
 
@@ -146,12 +159,12 @@ const right = keyframes`
 
 export const AnimatedScrollRight = styled.span`
  /*    position: absolute; */
-    left: ${props => props.left};
+   /*  left: ${props => props.left}; */
     width: 55px;
     height: 55px;
-    margin-left: -12px;
-    border-left: 12px solid var(--white);
-    border-bottom: 12px solid var(--white);
+  /*   margin-left: -12px; */
+    border-left: 12px solid var(--secondary-color);
+    border-bottom: 12px solid var(--secondary-color);
     border-radius: 10%;
     animation: ${right} 3s infinite ease-in-out;
     -webkit-animation: ${right} 3s infinite ease-in-out;
@@ -177,12 +190,12 @@ const left = keyframes`
 
 export const AnimatedScrollLeft = styled.span`
  /*    position: absolute; */
-    left: ${props => props.left};
+  /*   left: ${props => props.left}; */
     width: 55px;
     height: 55px;
-    margin-left: -12px;
-    border-left: 12px solid var(--white);
-    border-bottom: 12px solid var(--white);
+/*     margin-left: -12px; */
+    border-left: 12px solid var(--secondary-color);
+    border-bottom: 12px solid var(--secondary-color);
     border-radius: 10%;
     animation: ${left} 3s infinite ease-in-out;
     -webkit-animation: ${left} 3s infinite ease-in-out;
@@ -190,5 +203,31 @@ export const AnimatedScrollLeft = styled.span`
     :hover {
     cursor: pointer;
 }
+`
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+
+  cursor: pointer;
+`
+
+export const ProjectsWrapper = styled.div`
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const ProjectsOuterWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 

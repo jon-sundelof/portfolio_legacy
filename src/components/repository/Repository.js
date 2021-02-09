@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import RepositoryBlueprint from './RepositoryBlueprint'
-import { SectionWrapper } from '../ReusableElements'
-import { RepoCardsContainer } from './RepositoryElements'
+import { SectionWrapper, SectionHeader } from '../ReusableElements'
+import { RepoCardsContainer, RepositoryWrapper } from './RepositoryElements'
 
 
 const Repository = () => {
@@ -30,12 +30,15 @@ const Repository = () => {
 
     return (
         <>
-            <SectionWrapper id="repository-wrapper">
-                <RepoCardsContainer>
-                    {repo.map(function (item, i) {
-                        return <RepositoryBlueprint key={i} id={item.id} name={item.name} language={item.language} url={item.html_url} description={item.description} />
-                    })}
-                </RepoCardsContainer>
+            <SectionWrapper height="120vh" id="repository-wrapper">
+                <RepositoryWrapper>
+                    <SectionHeader color="var(--secondary-color)">Git Hub Repository</SectionHeader>
+                    <RepoCardsContainer>
+                        {repo.map(function (item, i) {
+                            return <RepositoryBlueprint key={i} id={item.id} name={item.name} language={item.language} url={item.html_url} description={item.description} />
+                        })}
+                    </RepoCardsContainer>
+                </RepositoryWrapper>
             </SectionWrapper>
         </>
     )

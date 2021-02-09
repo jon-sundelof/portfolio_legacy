@@ -5,7 +5,7 @@ import { ContactContainer, ContactFormCon, Form, Input, Message, ContactHeader }
 const Contact = () => {
     return (
         <>
-            <SectionWrapper id="contact-wrapper">
+            <SectionWrapper height="80vh" id="contact-wrapper">
                 <ContactContainer>
                     <ContactFormCon>
                         <ContactHeader>Let's Get In Touch!</ContactHeader>
