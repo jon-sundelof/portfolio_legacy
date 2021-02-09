@@ -29,7 +29,7 @@ export const List = styled.ul`
     @media screen and (max-width: 800px){
         width: 95vw;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         display: none;
     }
 `
@@ -60,9 +60,9 @@ export const NavItems = styled(Link)`
 
 
 export const MobileIcon = styled.div`
-    /* display: none; */
-    display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
-    @media screen and (max-width: 768px) {
+    display: none;
+   /*  display: ${({ isOpen }) => (isOpen ? 'none' : 'block')}; */
+    @media screen and (max-width: 800px) {
         display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
         position: absolute;
         top: 0;

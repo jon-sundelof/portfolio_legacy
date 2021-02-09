@@ -1,10 +1,40 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import LandingPage from './components/landingpage/LandingPage'
 
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 
-const GlobalStyle = createGlobalStyle`
+const App = () => {
+  const [colorState, setColorState] = useState(0);
+
+  const SwitchColor = () => {
+    if (colorState === 2) {
+      setColorState(0)
+    } else {
+      setColorState(colorState + 1)
+    }
+  }
+
+
+  const OriginalTheme = [
+    {
+      colorOne: '#EDC7B7;',
+      colorTwo: '#EEE2DC;',
+      colorThree: '#AC3B61;'
+    },
+    {
+      colorOne: '#C3073F;',
+      colorTwo: '#950740;',
+      colorThree: '#AC3B61;'
+    },
+    {
+      colorOne: '#3d6cb9',
+      colorTwo: '#00d1ff',
+      colorThree: '#3d6cb9'
+    }
+  ]
+
+  const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
@@ -16,22 +46,12 @@ const GlobalStyle = createGlobalStyle`
   text-decoration: none;
 }
 
+
   :root {
-/*     --primary-color: #C3073F;
-    --secondary-color: #950740; */
+    --primary-color: ${props => props.theme.colorOne};;
+    --secondary-color: ${props => props.theme.colorTwo};
+    --third-color: ${props => props.theme.colorThree};
 
-/*     --primary-color: #FDC4F9;
---secondary-color: #AAA1E6;
-    --third-color: #CAEFFC; */
-
-    --primary-color: #EDC7B7;
-    --secondary-color: #EEE2DC;
-    --third-color: #AC3B61;
-
- /*    --primary-color: #ff847c;
-    --secondary-color: #feceab; */
-   /*  --primary-color: #efbbcf;
-    --secondary-color: #ffd5cd; */
     --white: #fff;
     --grey: #636363;
   }
@@ -48,13 +68,13 @@ const GlobalStyle = createGlobalStyle`
 }
 `
 
-
-const App = () => {
   return (
     <>
       <Fragment>
-        <GlobalStyle />
-        <LandingPage />
+        <ThemeProvider theme={OriginalTheme[colorState]}>
+          <GlobalStyle />
+          <LandingPage SwitchColor={SwitchColor} />
+        </ThemeProvider>
       </Fragment>
     </>
   )

@@ -19,8 +19,12 @@ export const ContactFormCon = styled.div`
 export const ContactHeader = styled.h2`
     color: var(--secondary-color);
     font-size: 4rem;
+    transition: 1s ease;
     @media screen and (max-width: 1000px) {
         font-size: 2.8rem;
+  }
+    @media screen and (max-width: 400px) {
+        font-size: 1.7rem;
   }
 `
 
@@ -30,7 +34,7 @@ export const Form = styled.form`
  justify-content: space-around;
  align-content: space-around;
  width: 30%;
- height: 40%;
+ height: 50%;
  
  @media screen and (max-width: 1000px) {
         width: 55%;
@@ -44,7 +48,10 @@ export const Input = styled.input`
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     color: var(--white);
-
+    @media screen and (max-width: 1000px) {
+        font-size: 1rem;
+        height: 3vh;
+  }
     ::placeholder{
         display: flex;
         align-items: center;
@@ -75,4 +82,14 @@ export const Message = styled.textarea`
         font-family: 'Roboto', sans-serif;
         color: var(--white);
     }
+`
+
+export const SendMessageBtn = styled.button`
+    background: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    height: 5.5vh;
 `

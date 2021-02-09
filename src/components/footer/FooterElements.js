@@ -18,6 +18,7 @@ export const FooterWrapInner = styled.div`
     background-color: var(--primary-color);
     width: 98%;
     height: 75%;
+    transition: 300ms ease-in-out;
  /*    @media screen and (max-width: 1000px) {
         justify-content: flex-start;
   } */
@@ -63,6 +64,9 @@ cursor: pointer;
 @media screen and (max-width: 1000px) {
         font-size: 1.1rem;
   }
+  @media screen and (max-width: 400px) {
+    font-size: 1rem;
+  }
 `
 
 
@@ -78,6 +82,10 @@ export const RightPlacedWrapper = styled.div`
         right: 25%;
         font-weight: bold;
   }
+  @media screen and (max-width: 400px) {
+        right: 0;
+        width: 100%;
+  }
     
     
 `
@@ -91,6 +99,12 @@ export const RightLink = styled(LinkS)`
   :hover {
         letter-spacing: 0.11rem;
     }
+    @media screen and (max-width: 400px) {
+        font-size: 0.7rem;
+        :hover {
+            letter-spacing: 0.05rem;
+    }
+  }
 `
 export const RightSpan = styled.span`
     cursor: pointer;
@@ -100,5 +114,36 @@ export const RightSpan = styled.span`
   }
   :hover {
         letter-spacing: 0.11rem;
+    }
+    @media screen and (max-width: 400px) {
+        font-size: 0.7rem;
+        :hover {
+            letter-spacing: 0.05rem;
+    }
+`
+export const LeftPlacedWrapper = styled.div`
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 22%;
+    left: 5%;
+    @media screen and (max-width: 1000px) {
+        width: 50%;
+        bottom: 15%;
+        left: 25%;
+        font-weight: bold;
+  }
+    
+    
+`
+
+export const LeftSpan = styled.a`
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+    @media screen and (max-width: 1000px) {
+        font-size: 0.8rem;
+  }
+  :hover {
+        letter-spacing: 0.08rem;
     }
 `

@@ -10,6 +10,15 @@ export const SectionHeader = styled.h1`
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
+  @media screen and (max-width: 800px) {
+        top: 220%;
+        transform: translate(-46%,-50%);
+    }
+  @media screen and (max-width: 400px) {
+        font-size: 1.8rem;
+        top: 217%;
+        transform: translate(-46%,-50%);
+    }
 `
 
 export const ContentConatiner = styled.div`
@@ -21,6 +30,7 @@ export const SlideContainer = styled.div`
     align-items: center;
     margin: 0 auto;
     /* height: 50%; */
+    flex: 1 1 1500px;
 
 
 `
@@ -36,6 +46,9 @@ export const CardContainer = styled.div`
     align-items: center;
     @media screen and (max-width: 1000px) {
         max-width: 280px;
+  }
+  @media screen and (max-width: 700px) {
+        cursor: pointer;
   }
 `
 
@@ -172,6 +185,9 @@ export const AnimatedScrollRight = styled.span`
     :hover {
     cursor: pointer;
 }
+@media screen and (max-width: 700px) {
+        display: none;
+  }
 `
 const left = keyframes`
    0% {
@@ -203,10 +219,14 @@ export const AnimatedScrollLeft = styled.span`
     :hover {
     cursor: pointer;
 }
+@media screen and (max-width: 700px) {
+        display: none;
+  }
 `
 
 export const ButtonWrapper = styled.div`
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   width: 100px;
@@ -217,7 +237,7 @@ export const ButtonWrapper = styled.div`
 
 export const ProjectsWrapper = styled.div`
   width: 50%;
-  height: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,7 +247,8 @@ export const ProjectsOuterWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+/*   align-items: flex-start; */
 `
 

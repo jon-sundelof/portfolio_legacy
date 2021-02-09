@@ -104,7 +104,7 @@ const ProjectsRender = () => {
                             <AnimatedScrollLeft left="10%" />
                         </ButtonWrapper>
                         <SlideContainer>
-                            <CardContainer>
+                            <CardContainer onClick={NextSlide}>
                                 {ProjectCardData.map(function (item, i) {
                                     return (
                                         <Projects ResetPosition={ResetPosition} slideTransition={slideTransition} active={activeId === item.id} slideVal={slideVal} id={item.id} key={i} img={item.img} text={item.text} header={item.header} GitSvg={item.GitSvg} SurgeSvg={item.SurgeSvg} />
@@ -118,7 +118,6 @@ const ProjectsRender = () => {
                         </ButtonWrapper>
                     </ProjectsWrapper>
                 </ProjectsOuterWrapper>
-                <ScrollBtnCon to="repository-wrapper" smooth={true} spy={true} ><ScrollText>Repository</ScrollText><AnimatedScroll to="repository-wrapper" smooth={true} spy={true} /></ScrollBtnCon>
             </SectionWrapper>
         </>
     )

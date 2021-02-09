@@ -8,7 +8,7 @@ import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import { PageWrapper } from './LandingPageElements'
 
-const LandingPage = () => {
+const LandingPage = ({ SwitchColor }) => {
     return (
         <>
             <PageWrapper>
@@ -18,7 +18,7 @@ const LandingPage = () => {
                 <ProjectsRender />
                 <Repository />
                 <Contact />
-                <Footer />
+                <Footer SwitchColor={SwitchColor} />
             </PageWrapper>
         </>
     )

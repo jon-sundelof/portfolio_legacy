@@ -100,9 +100,6 @@ const sdb06 = keyframes`
   `
 
 export const AnimatedScroll = styled.span`
-/*     position: absolute; */
-/*     top: 150%;
-    left: 50%; */
     z-index: 9999;
     width: 35px;
     height: 35px;
@@ -126,12 +123,12 @@ export const ScrollText = styled.span`
    `
 export const ScrollBtnCon = styled(Link)`
     display: flex;
+  /*   flex: 1 1 1600px; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     z-index: 999;
     margin-top: 0;
-   /*  width: 450px; */
     height: 100px;
     cursor: pointer;
    `

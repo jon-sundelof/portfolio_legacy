@@ -30,7 +30,7 @@ const Repository = () => {
 
     return (
         <>
-            <SectionWrapper height="120vh" id="repository-wrapper">
+            <SectionWrapper height="140vh" id="repository-wrapper">
                 <RepositoryWrapper>
                     <SectionHeader color="var(--secondary-color)">Git Hub Repository</SectionHeader>
                     <RepoCardsContainer>
