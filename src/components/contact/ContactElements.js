@@ -92,4 +92,5 @@ export const SendMessageBtn = styled.button`
     border: 1px solid var(--white);
     border-radius: 3px;
     height: 5.5vh;
+    cursor: pointer;
 `

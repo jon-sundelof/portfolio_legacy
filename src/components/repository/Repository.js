@@ -32,7 +32,7 @@ const Repository = () => {
         <>
             <SectionWrapper height="140vh" id="repository-wrapper">
                 <RepositoryWrapper>
-                    <SectionHeader color="var(--secondary-color)">Git Hub Repository</SectionHeader>
+                    <SectionHeader color="var(--secondary-color)">Github Repository</SectionHeader>
                     <RepoCardsContainer>
                         {repo.map(function (item, i) {
                             return <RepositoryBlueprint key={i} id={item.id} name={item.name} language={item.language} url={item.html_url} description={item.description} />
