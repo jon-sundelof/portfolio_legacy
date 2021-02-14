@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { AnimatedButton, AnimatedSpan, SmallScreenHeader, SmallScreenWrapper } from './LandingPageSectionElements'
 import { SectionWrapper } from '../ReusableElements'
+import FrontEndSvg from '../svgs/FontEnd.js'
 
 
 

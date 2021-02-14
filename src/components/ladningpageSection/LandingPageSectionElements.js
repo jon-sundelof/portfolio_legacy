@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll';
 
+
 export const AnimatedButton = styled(Link)`
   display: flex;
   align-items: center;
@@ -32,9 +33,7 @@ export const AnimatedButton = styled(Link)`
     bottom: 0;
     right: 0;
     z-index: -1;
-/*     color: var(--white); */
     background-color: var(--primary-color);
-    /* background-color: #950740; */
 
     transition: transform 300ms ease-in-out;
     transform: scaleX(0);
@@ -101,5 +100,4 @@ export const SmallScreenWrapper = styled.div`
 
 export const SmallScreenHeader = styled.h1`
     color: var(--white);
-
 `

@@ -15,9 +15,9 @@ const Navbar = ({ toggle, isOpen }) => {
           <List>
             <NavItems to="landing-section-wrapper" smooth={true} spy={true} duration={500} offset={-80} activeClass="active" >Home</NavItems>
             <NavItems to="about-wrapper" smooth={true} spy={true} duration={500} exact="true" offset={-80} >About</NavItems>
-            <NavItems to="projects-wrapper" smooth={true} spy={true} duration={500} exact="true">Projects</NavItems>
-            <NavItems to="repository-wrapper" smooth={true} spy={true} duration={500} exact="true" offset={50}>Repository</NavItems>
-            <NavItems to="contact-wrapper" smooth={true} spy={true} duration={500} exact="true" offset={55}>Contact</NavItems>
+            <NavItems to="projects-wrapper" smooth={true} spy={true} duration={500} exact="true" offset={-120}>Projects</NavItems>
+            <NavItems to="repository-wrapper" smooth={true} spy={true} duration={500} exact="true" offset={-120}>Repository</NavItems>
+            <NavItems to="contact-wrapper" smooth={true} spy={true} duration={500} exact="true" offset={-120}>Contact</NavItems>
           </List>
         </NavItemsContainer>
       </Nav>
